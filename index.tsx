@@ -41,7 +41,7 @@ export function react2angular<Props>(
       }
       render() {
         if (!this.isDestroyed) {
-          render(
+          ReactDOM.createPortal(
             <Class {...this.props} {...this.injectedProps as any} />,
             this.$element[0]
           )
